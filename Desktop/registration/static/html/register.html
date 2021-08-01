@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+<body>
+   
+    <form  id = "rg-form">
+        <h1>EVELYHN HONE HACK CLUB REGISTRATION FORM</h1>
+        <input type="text" placeholder="name" id="username"><br>
+        <input type="text" placeholder="email" id="email"><br>
+        <input type="password" placeholder="password" id="password"> <br>
+        <input type='submit' value="submit">
+        <span id="span"></span>
+    </form>
+<a href="./login.html">login</a>
+    <script>
+        const form = document.getElementById("rg-form");
+        form.addEventListener('submit', reg_user);
+        async function reg_user()
+        {
+           event.preventDefault()
+           const username = document.getElementById('username').value;
+           const email = document.getElementById('email').value;
+           const password = document.getElementById('password').value;
+      
+          const response = await  fetch('/api/register',
+           {
+               method:'POST',
+               headers:{
+                   'Content-Type':'application/json'
+               },
+               body: JSON.stringify({username, email, password})
+               
+           } );
+          const message = await response.text();
+         alert(`${message}`);
+           
+          
+        }
+
+      
+    </script>
+ 
+</body>
+</html>

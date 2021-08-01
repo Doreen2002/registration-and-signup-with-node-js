@@ -1,0 +1,67 @@
+@import url(//db.onlinewebfonts.com/c/6c3a09a727b79f2832ddddaa5d699747?family=Eurostile);
+@font-face {font-family: "Eurostile"; src: url("//db.onlinewebfonts.com/t/6c3a09a727b79f2832ddddaa5d699747.eot"); src: url("//db.onlinewebfonts.com/t/6c3a09a727b79f2832ddddaa5d699747.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6c3a09a727b79f2832ddddaa5d699747.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6c3a09a727b79f2832ddddaa5d699747.woff") format("woff"), url("//db.onlinewebfonts.com/t/6c3a09a727b79f2832ddddaa5d699747.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6c3a09a727b79f2832ddddaa5d699747.svg#Eurostile") format("svg"); }
+*{
+    margin:0px;
+    padding:0px;
+    
+    
+}
+a
+{
+    text-decoration: none;
+    color: rgba(0, 128, 0, 0.651);
+   
+}
+body, html{
+  background-color: whitesmoke;
+  font-family: "Eurostile";
+    
+}
+span{
+    font-size: 35px;
+    color: rgb(250, 53, 53);
+  position: absolute;
+  top:12%;
+  left: 30%;
+
+}
+@media screen and (max-width:768px) {
+   span {
+    font-size: 18px;
+    left:10%;
+    top:7%
+   }
+}
+
+div{
+   
+    margin-left: 30%;
+    margin-top: 17%;
+    padding: 20px;
+}
+@media screen and (max-width:768px) {
+    div{
+        margin-left: 5%;
+        margin-top: 25%;
+        padding: 20px;
+        font-size: 15px;
+    }
+ }
+button{
+    padding:20px;
+    margin: 30px;
+    border-radius:1rem;
+    width: 300px;
+    font-size: 20px;
+    border: 2px solid  rgba(0, 128, 0, 0.541);
+    background-color: transparent;
+   
+}
+@media screen and (max-width:768px) {
+    button{
+        padding:10px;
+        margin: 10px;
+        width: 200px;
+        
+    }
+ }

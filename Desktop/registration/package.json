@@ -1,0 +1,30 @@
+{
+  "name": "zedoneapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon start.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.12.14",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "twilio": "^3.64.0"
+  }
+}
