@@ -11,8 +11,8 @@
     
     <form  id = "rg-form">
         <h1>login</h1>
-        <input type="text" placeholder="name" id="username"><br>
-        <input type="password" placeholder="password" id="password"> <br>
+        <input type="text" placeholder="name" id="username" required><br>
+        <input type="password" placeholder="password" id="password" required> <br>
         <input type='submit' value="submit">
         <span id="span"></span>
     </form>
@@ -35,8 +35,10 @@
                body: JSON.stringify({username, password})
                
            } );
-          const message = await response.text();
-          alert(`${message}`);
+          const message = await response.json();
+
+
+          document.getElementById('span').innerHTML = message.message;
            
           
         }

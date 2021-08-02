@@ -46,10 +46,10 @@ exports.loginUserController = async(req, res)=>
 {
     //checking user exists
     const user = await users.findOne({username: req.body.username});
-    if(!user) res.status(400).json({success:false, message:"user with such a username doesnt exist"})
+    if(!user) res.status(400).json({success:false, message:"wrong username or  Password"})
     //using bcrypt to compare passwords
     const validpass = await bcrypt.compare(req.body.password, user.password);
-    if (!validpass) return res.status(404).json({ success: false, message: "wrong Password" });
+    if (!validpass) return res.status(404).json({ success: false, message: "wrong username or  Password" });
     //creating a token to send to the user
     const token = jsonwt.sign({ user_id: user.user_id }, process.env.USER_TOKEN );
     if(validpass)
