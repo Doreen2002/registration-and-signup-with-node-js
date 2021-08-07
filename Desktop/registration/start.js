@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 
 
 const regRoutes = require('./routes/registerRouter.js');
+
+const taskRoutes = require('./routes/tasksRoutes.js');
 const path = require('path');
 const multer = require('multer');
 dotenv.config();
@@ -20,7 +22,9 @@ app.use(cors());
 
 
 
-app.use('/api', regRoutes);
+app.use('/api/users', regRoutes);
+
+app.use('/api/tasks', taskRoutes);
 
 
 

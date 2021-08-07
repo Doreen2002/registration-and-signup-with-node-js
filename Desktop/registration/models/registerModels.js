@@ -15,7 +15,12 @@ const registerSchema = new mongoose.Schema({
     {
         type:String,
         require:require
-    }
+    },
+    taskname:
+
+    {
+        type:Array
+    },
 },
 {timestamps:true})
 

@@ -7,32 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-   
-    
     <form  id = "rg-form">
-        <h1>login</h1>
-        <input type="text" placeholder="name" id="username" required><br>
-        <input type="password" placeholder="password" id="password" required> <br>
-        <input type='submit' value="submit">
+        <h1>create task</h1> <a href="./viewTasks.html">view taks </a>
+        <input type="text" placeholder="taskname" id="taskname" required><br>
+        
+        <input type='submit' value="ADD">
         <span id="span"></span>
     </form>
 
     <script>
         const form = document.getElementById("rg-form");
-        form.addEventListener('submit', login_user);
-        async function login_user()
+        form.addEventListener('submit', create_task);
+        async function create_task()
         {
            event.preventDefault()
-           const username = document.getElementById('username').value;
-           const password = document.getElementById('password').value;
+           const taskname = document.getElementById('taskname').value;
+          
       
-          const response = await  fetch('/api/users/login',
+          const response = await  fetch('/api/tasks/create-task',
            {
                method:'POST',
                headers:{
                    'Content-Type':'application/json'
+                   
                },
-               body: JSON.stringify({username, password})
+               body: JSON.stringify({taskname})
                
            } );
           const message = await response.json();
@@ -42,8 +41,6 @@
            
           
         }
-
-      
-    </script>
+        </script>
 </body>
 </html>
